@@ -1,0 +1,41 @@
+bai1:  Mo ta thuat toan chuyen nhiet do C sang do F
+
+công thuc : C/5 = (F-32)/9
+
+ma giai pseudo-code
+
+Begin
+
+  input C,F
+
+F= (9*C)/5 + 32
+
+ display F
+
+end
+
+ 
+
+bai2: chon ra mot so tu nhien 0--> 9
+
+ma giai pseudo- code
+
+Begin
+
+    input N la so tu nhien tu 0 den 9
+
+    input M
+
+    if (N=M)
+
+     display (Ðúng)
+
+else
+
+      display(Sai)
+
+endif
+
+end
+
+ 
