@@ -1,0 +1,2 @@
+let inputwitdh;
+let inputheight;

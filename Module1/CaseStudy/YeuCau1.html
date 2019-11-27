@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeuCau1</title>
+</head>
+<body>
+<script>
+
+    var name = prompt("Enter Name Customer: ");
+    var iD = prompt("Enter ID Card Customer: ");
+    var birthday = prompt("Enter Birthday Customer: ");
+    var email = prompt("Enter Email Customer: ");
+    var address = prompt("Enter Address Customer: ");
+    var typeCustomer = prompt("Enter Type Customer: ");
+    var discount = prompt("Enter Discount: ");
+    var noa = prompt("Enter Number Of Accompanying: ");
+    var typeRoom = prompt("Enter Type Room: ");
+    var rent = prompt("Enter Rent Day: ");
+    var typeServices = prompt("Please choose servies you want: " +
+        "\n 1. Villa" +
+        "\n 2. House" +
+        "\n 3. Room");
+    if (typeServices === "1")
+        typeServices = 500;
+    else if (typeServices === "2")
+        typeServices = 300;
+    else
+        typeServices = 100;
+    totalPay = typeServices * rent * (discount/100);
+
+    alert("Name : " + name + "\nID Card : " + iD + "\nBirthday: "
+        + birthday + "\nEmail: " + email + "\nAddress: " + address + "\nType: "
+        + typeCustomer + "\nDiscount: "
+        + discount + "\nNumber Of Accompanying: " + noa + "\nType Room: " + typeRoom + "\nRent Day: " + rent
+        + "\nType Service: " + typeServices + "\ntotalpay: " + totalPay);
+
+</script>
+</body>
+</html>
