@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap1</title>
+</head>
+<body>
+<script>
+    let browser = prompt("Enter browser you want to run: "
+        + "\n 1. Chrome"
+        + "\n 2. Firefox"
+        + "\n 3. Safari"
+        + "\n 4. Opera"
+        + "\n 5. Edge");
+    switch (browser) {
+        case ("5"):
+            alert("You've got the Edge!");
+            break;
+        case ("1" || "2" ||  "3" ||  "4"):
+            alert("Okays we support this browser too");
+            break;
+        default:
+            alert("We hope that this page looks ok");
+    }
+</script>
+</body>
+</html>

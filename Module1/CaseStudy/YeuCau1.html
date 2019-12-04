@@ -27,7 +27,7 @@
         typeServices = 300;
     else
         typeServices = 100;
-    totalPay = typeServices * rent * (discount/100);
+    totalPay = typeServices * rent * ((1 - discount / 100));
 
     alert("Name : " + name + "\nID Card : " + iD + "\nBirthday: "
         + birthday + "\nEmail: " + email + "\nAddress: " + address + "\nType: "

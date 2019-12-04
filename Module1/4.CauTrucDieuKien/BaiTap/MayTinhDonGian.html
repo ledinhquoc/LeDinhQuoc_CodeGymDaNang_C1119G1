@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinhDonGian</title>
+</head>
+<body>
+
+<form>
+    <input id="result" type="text" width="50"></br>
+    <input type="button" value="1" onclick="result.value +=this.value">
+    <input type="button" value="2" onclick="result.value +=this.value">
+    <input type="button" value="3" onclick="result.value +=this.value">
+    <input type="button" value="+" onclick="result.value +=this.value"></br>
+    <input type="button" value="4" onclick="result.value +=this.value">
+    <input type="button" value="5" onclick="result.value +=this.value">
+    <input type="button" value="6" onclick="result.value +=this.value">
+    <input type="button" value="-" onclick="result.value +=this.value"></br>
+    <input type="button" value="7" onclick="result.value +=this.value">
+    <input type="button" value="8" onclick="result.value +=this.value">
+    <input type="button" value="9" onclick="result.value +=this.value">
+    <input type="button" value="x" onclick="result.value +=this.value"></br>
+    <input type="reset" value="C">
+    <input type="button" value="0" onclick="result.value +=this.value">
+    <input type="button" value="=" onclick="caculation()">
+    <input type="button" value="/" onclick="result.value +=this.value"></br>
+</form>
+
+<script>
+    function caculation() {
+        document.getElementById("result").value += "=" + eval(result.value);
+    }
+</script>
+</body>
+</html>

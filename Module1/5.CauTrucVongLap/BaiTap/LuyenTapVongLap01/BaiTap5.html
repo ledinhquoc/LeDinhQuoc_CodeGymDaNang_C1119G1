@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap3</title>
+</head>
+<body>
+<script>
+
+    let x = 0;
+    let y = 1;
+    let z = 0;
+    let t  = 0;
+    for (i = 0; i < 20; i++) {
+        z = x + y;
+        x = y;
+        y = z;
+        t +=z;
+        if (i ===19){
+            document.write(1 + t);
+        }
+        document.write(z + "<br>");
+    }
+</script>
+</body>
+</html>

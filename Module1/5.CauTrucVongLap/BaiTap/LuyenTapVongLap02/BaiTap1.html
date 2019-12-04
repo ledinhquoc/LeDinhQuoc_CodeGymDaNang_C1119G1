@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap1</title>
+</head>
+<body>
+<script>
+    document.write("");
+    tong = 0;
+    sott1 = 1;
+    sott2 = 0;
+
+    for (let i = 0; i<100;i++)
+    {
+        tong = sott1 + sott2;
+        document.write(tong + "" + "<br>");
+        sott2 = sott1;
+        sott1 = tong;
+    }
+
+</script>
+</body>
+</html>

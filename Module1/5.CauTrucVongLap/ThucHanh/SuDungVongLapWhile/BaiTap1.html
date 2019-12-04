@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap1</title>
+</head>
+<body>
+<script>
+    let num = 0;
+    let total = 0;
+
+    while (num !== -1) {
+        num = parseInt(prompt("Enter your number: ")) ;
+        if (num === -1){
+        break;
+        }
+        document.write(num + "<br>");
+        total += num;
+    }
+    document.write(total);
+</script>
+</body>
+</html>

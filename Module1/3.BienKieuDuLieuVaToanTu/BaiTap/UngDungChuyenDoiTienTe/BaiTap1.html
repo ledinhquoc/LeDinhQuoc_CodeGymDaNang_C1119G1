@@ -3,13 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <title>BaiTap1</title>
+
+<style>
+    table {
+        font-family: Arial;
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td, th {
+        border: #dddddd;
+        text-align: center;
+        padding:0.2px;
+    }
+    tr {
+        background: #FFFFFF;
+    }
+    button{
+        background: darkblue;
+        border: brown;
+        color: white;
+        padding: 10px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: auto;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-  <form>
 
-  </form>
-<h1>
-    
-</h1>
+<table>
+    <tr>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+    </tr>
+    <tr>
+        <form>
+           <td>
+               <input type="text"  min="0" id="amount"><br></td>
+            <td>
+                <select id="fc">
+                    <option value="VietNam">VietNam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="tc">
+                    <option value="USD1">USD</option>
+                    <option value="VietNam1">VietNam</option>
+                </select>
+            </td>
+
+            <td>
+                <button type="button" onclick="myFunction()">ConVert
+            </button>
+
+            </td>
+        </form>
+    </tr>
+</table >
+
+
+    <p id="demo"><p>
+
+<script>
+    function myFunction(){
+        var fc1 = document.getElementById("fc").value;
+        var tc1 = document.getElementById("tc").value;
+        var money = (document.getElementById("amount").value)*1;
+
+        if (fc1 ==="VietNam" && tc1 ==="USD1")
+        {
+            var z = money/23000;
+            document.getElementById("demo").innerText = "Result: " + z +"USD"
+
+        }
+        else if (fc1 ==="USD" && tc1 ==="VietNam1"){
+            var z1 = money*23000;
+            document.getElementById("demo").innerText= "Result: " + z1 +"VND";
+        }else {document.getElementById("amount").innerText = "Result: "+money}
+    }
+</script>
 </body>
 </html>

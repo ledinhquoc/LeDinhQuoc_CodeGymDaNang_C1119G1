@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap1</title>
+</head>
+<body>
+    <input id="F" type="checkbox" id = "fast" onclick="checkbox1()">
+    <label for="fast">FAST</label>
+
+    <input id="G" type="checkbox" id = "good" onclick="checkbox2()">
+    <label for="good">GOOD</label>
+
+    <input id="C" type="checkbox" id = "CHEAP" onclick="checkbox3()">
+    <label for="cheap">CHEAP</label>
+</body>
+<script>
+    var a = document.getElementById("F");
+    var b = document.getElementById("G");
+    var c = document.getElementById("C");
+    
+    function checkbox1() {
+        if(a.checked && b.checked){
+            if (c.checked){
+                c.checked = false;
+            }
+        }
+    }
+    function checkbox2() {
+        if(b.checked && c.checked){
+            if (a.checked){
+                a.checked = false;
+            }
+        }
+    }
+    function checkbox3() {
+        if(a.checked && c.checked){
+            if (b.checked){
+                b.checked = false;
+            }
+        }
+    }
+</script>
+</html>

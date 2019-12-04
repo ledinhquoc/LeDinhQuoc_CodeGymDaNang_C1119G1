@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap8</title>
+</head>
+<body>
+
+<button id="x"  onclick="f()">Click me</button>
+<script>
+function f() {
+    let count = 0;
+    let lucky = Math.floor(Math.random() * 10);
+    while (count < 4){
+        let input = parseInt(prompt("nhap so may man"));
+        count++;
+        if (input === lucky){
+            alert("You Win");
+            break;
+        }
+    }
+    if (count === 4){
+        alert("You Lose");
+    }
+}
+ </script>
+</body>
+</html>

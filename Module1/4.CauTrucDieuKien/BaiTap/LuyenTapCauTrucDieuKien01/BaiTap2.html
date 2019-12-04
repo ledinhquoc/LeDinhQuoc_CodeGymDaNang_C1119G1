@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap2</title>
+</head>
+<body>
+<script>
+    var birthday = prompt("Enter your birthday: ");
+    var currentYear = new Date().getFullYear();
+    var birthday = new Date(birthday).getFullYear();
+    var age = currentYear - birthday;
+
+    if (age < 16){
+        alert("Not enough age to apply in 10 class");
+    } else {
+        alert("Enough age to apply to 10 class")
+    }
+
+</script>
+</body>
+</html>

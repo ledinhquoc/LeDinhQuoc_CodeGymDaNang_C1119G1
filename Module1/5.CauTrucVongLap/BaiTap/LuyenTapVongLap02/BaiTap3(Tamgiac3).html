@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tamgiac3</title>
+</head>
+<body>
+<script>
+    let trong = 0;
+    let n = parseInt(prompt("nhap so sao:"));
+    for (let i = 0; i < n ; i--){
+        for (let j = 0; j<n; j++){
+            trong = n - i;
+            if (j< trong)
+                document.write("&nbsp&nbsp");
+                else
+                    document.write("*");
+            }
+        document.write("<br>");
+    }
+</script>
+</body>
+</html>

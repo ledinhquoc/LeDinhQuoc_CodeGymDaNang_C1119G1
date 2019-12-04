@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SoNguyenTo</title>
+</head>
+<body>
+<script>
+    var result = "";
+    var n = parseInt(prompt("Nhập vào n"));
+    hienThi(n);
+    function checkSNT(num) {
+        for (var i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    function hienThi(n) {
+        for (var i = 3; i <= n; i=i+2) {
+            if (checkSNT(i)) {
+                result += i + "<br/>";
+            }
+        }
+        document.writeln(2 + "<br/>" + result);
+    }
+
+
+
+
+    // var num = prompt("nhap so luong can tim: ")*1;
+    // document.write(2 + "" + "<br>");
+    // var i = 1;
+    // for (var k = 3 ; i < num; k+=2 ) {
+    //     var count = 0;
+    //     for (var j = 2; j<k;j++) {
+    //         if ((k % j)===0){
+    //             count =0 ;
+    //             break;
+    //         }
+    //         count++;
+    //     }if (count>0){
+    //         document.write(k + "<br>");
+    //         i++;
+    //     }
+    // }
+</script>
+</body>
+</html>

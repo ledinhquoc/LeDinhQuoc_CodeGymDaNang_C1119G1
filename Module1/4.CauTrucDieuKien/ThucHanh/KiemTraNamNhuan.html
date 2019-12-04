@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KiemTraNamNhuan</title>
+</head>
+<body>
+<script>
+    var year = parseInt(prompt("Enter a Year"));
+        if(year % 4 == 0){
+            if (year % 100 == 0){
+                if (year % 400 == 0){
+                alert(year + "is the leap year ");
+                } else {
+                    alert(year + "is not the leap year");
+                }
+            } else {
+                alert( year + "is the leap year");
+            }
+        }
+        else {
+            alert(year + "is not the leap year");
+        }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MayTinh</title>
+    <style>
+        table, th, td {
+            border: 1px solid darkgrey;
+        }
+        #t{
+            margin-bottom: 5px;
+            width: 600px;
+            height: 40px;
+            text-align: right ;
+            font-size: 30px;
+        }
+        td,th{
+            width: 80px;
+            height: 40px;
+            text-align: center;
+        }
+        button,img{
+            width: 70px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body>
+<table id = "t">
+</table>
+<table>
+    <tr>
+        <td><button >Red</button></td>
+        <td><img src="aaaa.PNG"></td>
+        <td><button >X!</button></td>
+        <td><button >(</button></td>
+        <td><button >)</button></td>
+        <td><button >%</button></td>
+        <td><button onclick="clr()">AC</button></td>
+    </tr>
+    <tr>
+        <td><button >lnv</button></td>
+        <td><button >sin</button></td>
+        <td><button >log</button></td>
+        <td><button value='7' onclick="display('7')">7</button></td>
+        <td><button  value='8' onclick="display('8')">8</button></td>
+        <td><button value='9' onclick="display('9')">9</button></td>
+        <td><button value="/" onclick="cal('/')">/</button></td>
+    </tr>
+    <tr>
+        <td><button >e</button></td>
+        <td><button >tan</button></td>
+        <td><button >ln</button></td>
+        <td><button value='4' onclick="display('4')">4</button></td>
+        <td><button  value='5' onclick="display('5')">5</button></td>
+        <td><button  value='6' onclick="display('6')">6</button></td>
+        <td><button value="*" onclick="cal('*')">X</button></td>
+    </tr>
+    <tr>
+        <td><button >e</button></td>
+        <td><button >tan</button></td>
+        <td><button >#</button></td>
+        <td><button value='1' onclick="display('1')">1</button></td>
+        <td><button value='2' onclick="display('2')">2</button></td>
+        <td><button  value='3' onclick="display('3')">3</button></td>
+        <td><button value="-" onclick="cal('-')">-</button></td>
+    </tr>
+    <tr>
+        <td><button >Ans</button></td>
+        <td><button >EXP</button></td>
+        <td><button >X^y</button></td>
+        <td><button value="0" onclick="display('0')" >0</button></td>
+        <td><button >.</button></td>
+        <td><button value="=" onclick="cal('=')">=</button></td>
+        <td><button value="+" onclick="cal('+')">+</button></td>
+    </tr>
+</table>
+<script>
+    let str1 = document.getElementById("t").innerText ;
+    // let check= document.getElementById("t");
+    // let te = check.substring(check.length - 1);
+    function clr() {
+        document.getElementById("t").innerHTML =" ";
+    }
+    function display(val) {
+        //let a = document.getElementById("text").value;
+        document.getElementById("t").innerText  += val;
+    }
+    function cal(ope) {
+        let che= document.getElementById("t").innerText;
+        let te = che.substring(che.length - 1);
+        if(te !== ope) {
+            switch (ope) {
+                case "+":
+                    document.getElementById("t").innerHTML += ope;
+                    break;
+                case "-":
+                    document.getElementById("t").innerHTML += ope;
+                    break;
+                case "*":
+                    document.getElementById("t").innerHTML += ope;
+                    break;
+                case "/":
+                    document.getElementById("t").innerHTML += ope;
+                    break;
+                case "=":
+                    if(che.length === 0){
+                        document.getElementById("t").innerText = "0";
+                    }
+                    let str = document.getElementById("t").innerText;
+                    document.getElementById("t").innerText = eval(str);
+                    break;
+                default:
+                // code block
+            }
+        }else
+            alert("nhap thua toan tu");
+        // document.getElementById("t").innerHTML =" ";
+    }
+    // function f() {
+    //   document.getElementById("t").innerHTML= document.getElementById("2").value;
+    // }
+</script>
+</body>
+</html>
+<!--//on mousedowm : nha chuot thuc hien-->

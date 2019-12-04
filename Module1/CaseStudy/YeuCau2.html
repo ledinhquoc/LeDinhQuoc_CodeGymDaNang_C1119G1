@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeuCau2</title>
+</head>
+<body>
+
+<p></p>
+<script>
+    var nameCustomer = "Lê Đình Quốc";
+    var emailCustomer = "elvisle93@gmail.com";
+    var idCard = "123456789";
+    var birthdayCustomer = "01/06/1993";
+    var numberOfAccompanying = 2;
+    var typeRoom = "Bussiness";
+    var rentDay = 10;
+    var typeCustomer = "Platium";
+    var addressCustomer = "Đà Nẵng";
+    var discount = 10;
+    var currentYear = new Date().getFullYear();
+    var birthday = new Date(birthdayCustomer).getFullYear();
+    var ageCustomer = currentYear - birthday;
+    var typeServices = "Villa";
+    var moneyPerday;
+
+    if (typeServices === "Villa")
+        typeServices = 500;
+    else if (typeServices === " House")
+        typeServices = 300;
+    else if (typeServices === "Room")
+        typeServices = 100;
+    else
+        typeServices = 0;
+    moneyPerday = (typeServices * rentDay * (1 - discount / 100));
+    if (addressCustomer === "Đà Nẵng")
+        moneyPerday -= 20;
+    else if (addressCustomer === "Huế")
+        moneyPerday -= 10;
+    else
+        moneyPerday -= 5;
+
+    if (typeCustomer === "Diamond")
+        moneyPerday -= 15;
+    else if (typeCustomer === "Platimun")
+        moneyPerday -= 10;
+    else if (typeCustomer === "Gold")
+        moneyPerday -= 5;
+    else if (typeCustomer === "Silver")
+        moneyPerday -= 2;
+    else
+        moneyPerday -= 0;
+    if (rentDay >= 7)
+        moneyPerday -= 30;
+    else if (5 <= rentDay <= 7)
+        moneyPerday -= 20;
+    else if (2 <= rentDay <= 4)
+        moneyPerday -= 10;
+    else
+        moneyPerday -= 0;
+    if ((ageCustomer >= 30) & (addressCustomer === "Đà Nẵng"))
+        moneyPerday -= 2;
+    else if ((20 <= ageCustomer <= 30) & (addressCustomer === "Đà Nẵng"))
+        moneyPerday -= 1;
+
+    var  option1 = (" nameCustomer: " + nameCustomer
+        + "\n emailCustomer: " + emailCustomer + "\n idCard: " + idCard
+        + "\n birthdayCustomer: " + birthdayCustomer + "\n addressCustomer: " + addressCustomer + "\n typeCustomer: "
+        + typeCustomer + "\n discount: " + discount + "\n numberOfAccompanying: " + numberOfAccompanying
+        + "\n typeRoom: " + typeRoom
+        + "\n rentDay: " + rentDay + "\n typeServices: " + typeServices);
+
+   var option2 = ("Choose information customer you want to edit: " + "\n 1. nameCustomer: " + nameCustomer
+        + "\n 2. emailCustomer: " + emailCustomer + "\n 3. idCard: " + idCard
+        + "\n 4. birthdayCustomer: " + birthdayCustomer + "\n 5. addressCustomer: " + addressCustomer + "\n 6. typeCustomer: "
+        + typeCustomer + "\n 7. discount: " + discount + "\n 8. numberOfAccompanying: " + numberOfAccompanying
+        + "\n 9. typeRoom: " + typeRoom
+        + "\n 10 .rentDay: " + rentDay + "\n 11. typeServices: " + typeServices);
+
+   var option3 = (" ameCustomer: " + nameCustomer
+        + "\n emailCustomer: " + emailCustomer + "\n idCard: " + idCard
+        + "\n birthdayCustomer: " + birthdayCustomer + "\n addressCustomer: " + addressCustomer + "\n typeCustomer: "
+        + typeCustomer + "\n discount: " + discount + "\n numberOfAccompanying: " + numberOfAccompanying
+        + "\n typeRoom: " + typeRoom
+        + "\n rentDay: " + rentDay + "\n typeServices: " + typeServices + "\n moneyPerday: " + moneyPerday);
+
+    var alert1 = prompt("\n 1. Show Information Customer"
+        + "\n 2. Edit Information Customer"
+        + "\n 3. Show The Amount To Be Paid After Discount");
+
+    switch (alert1) {
+        case "1" :
+            alert(option1);
+            break;
+        case "2" :
+            switch (prompt(option2)) {
+                case "1":
+                    var nameChange = prompt("Enter Name you want to edit: ");
+                    var nameReplace = option1.replace(nameCustomer, nameChange);
+                    alert(nameReplace);
+                    break;
+                case "2":
+                    var emailChange = ("Enter Email you want to edit: ");
+                    var emailReplace = option1.replace(emailCustomer, emailChange);
+                    alert(emailReplace);
+                    break;
+                case "3":
+                    var idCardChange = prompt("Enter idCard you want to edit: ");
+                    var idCardReplace = option1.replace(idCard, idCardChange);
+                    alert(idCardReplace);
+                    break;
+                case "4":
+                    var birthdayChange = prompt("Enter birthday you want to edit: ");
+                    var birthdayReplace = option1.replace(birthdayCustomer, birthdayChange);
+                    alert(birthdayReplace);
+                    break;
+                case "5":
+                    var addressChange = prompt("Enter address you want to edit: ");
+                    var addressReplace = option1.replace(addressCustomer, addressChange);
+                    alert(addressReplace);
+                    break;
+                case "6":
+                    var typeCustumerChange = prompt("Enter typeCustomer you want to edit: ");
+                    var typeCustomerReplace = option1.replace(typeCustomer, typeCustumerChange);
+                    alert(typeCustomerReplace);
+                    break;
+                case "7":
+                    var discountChange = prompt("Enter discount you want to edit: ");
+                    var discountReplace = option1.replace(discount, discountChange);
+                    alert(discountReplace);
+                    break;
+                case "8":
+                    var numberOfAccompanyingChange = prompt("Enter numberOfAccompanying you want to edit: ");
+                    var numberOfAccompanyingReplace = option1.replace(numberOfAccompanying, numberOfAccompanyingChange);
+                    alert(numberOfAccompanyingReplace);
+                    break;
+                case "9":
+                    var typeRoomChange = prompt("Enter typeRoom you want to edit: ");
+                    var typeRoomReplace = option1.replace(typeRoom, typeRoomChange);
+                    alert(typeRoomReplace);
+                    break;
+                case "10":
+                    var rentDayChange = prompt("Enter rentday you want to edit: ");
+                    var rentDayReplace = option1.replace(typeRoom, rentDayChange);
+                    alert(rentDayReplace);
+                    break;
+                case "11":
+                    var typeServicesChange = prompt("Enter typeServices you want to edit: ");
+                    var typeServicesReplace = option1.replace(typeServices, typeServicesChange);
+                    alert(typeServicesReplace);
+                    break;
+                default:
+                    alert("failed");
+            }
+            break;
+        case "3":
+            alert(option3);
+            break
+        default:
+            alert("failed");
+    }
+
+</script>
+</body>
+</html>
