@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeuCau4</title>
+</head>
+<body>
+<script>
+    let arr= ["Peter","John","Annie","Lucy","Elvis","Ron","Teddy","Frank","James","Ken"];
+    let add ;
+    let display1 = prompt("1. Add new name" + "\n2. Delete Name") ;
+    let del;
+    function displayList() {
+        let result = "" ;
+        for (let i = 0; i <= arr.length -1; i++){
+            result += i + 1 + "." + arr[i] + "\n";
+        } return result;
+    } {
+        
+    }
+ switch (display1) {
+     case "1":
+         let number = parseInt(prompt("Enter the quantity of people: "));
+         for (let i = 1; i <= number; i++) {
+             add = arr.push(prompt("Enter name no " + i));
+             arr.sort();
+         }
+         alert(displayList());
+         break;
+
+     case "2":
+         arr.sort();
+         del = prompt("Choose name you want to delete: " + "\n" + displayList());
+         arr.splice(del - 1, 1);
+         alert(displayList());
+         break;
+ }
+</script>
+</body>
+</html>

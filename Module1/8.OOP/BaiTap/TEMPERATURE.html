@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TEMPERATURE</title>
+</head>
+<body>
+<script>
+    function Temperature(C) {
+
+        let F = (C * 1.8) + 32;
+        let K = C + 273.5;
+        this.C = C;
+        this.F = F;
+        this.K = K;
+
+        this.setC = function (C) {
+            this.C = C;
+        };
+
+        this.getF = function () {
+            return this.F;
+        };
+        this.getK = function () {
+            return this.K;
+        };
+        this.getC = function () {
+            return this.C;
+        };
+    }
+
+    let temperature = new Temperature(5);
+    temperature.setC(6);
+    temperature.getC();
+    let F = temperature.getF();
+    let K = temperature.getK();
+    document.write("Temperature of F is : " + F +"<br>" + "Temperature of K is :" + K);
+</script>
+</body>
+</html>

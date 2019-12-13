@@ -6,7 +6,6 @@
 </head>
 <body>
 <script>
-
     var name = prompt("Enter Name Customer: ");
     var iD = prompt("Enter ID Card Customer: ");
     var birthday = prompt("Enter Birthday Customer: ");
@@ -28,13 +27,11 @@
     else
         typeServices = 100;
     totalPay = typeServices * rent * ((1 - discount / 100));
-
     alert("Name : " + name + "\nID Card : " + iD + "\nBirthday: "
         + birthday + "\nEmail: " + email + "\nAddress: " + address + "\nType: "
         + typeCustomer + "\nDiscount: "
         + discount + "\nNumber Of Accompanying: " + noa + "\nType Room: " + typeRoom + "\nRent Day: " + rent
-        + "\nType Service: " + typeServices + "\ntotalpay: " + totalPay);
-
+        + "\nType Service: " + typeServices + "\ntotalPay: " + totalPay);
 </script>
 </body>
 </html>

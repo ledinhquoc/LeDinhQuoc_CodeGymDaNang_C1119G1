@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rectangle</title>
+</head>
+<body>
+<script>
+    function Rectangle(a,b) {
+       let S = a*b;
+       let P = 2*(a*b);
+        this.a = a;
+        this.b = b;
+        this.S = S;
+        this.P = P;
+        this.setLength = function (a) {
+            this.a = a;
+        }
+        this.setWide = function (b) {
+            this.b = b;
+        }
+        this.getLength = function () {
+            return this.a;
+        }
+        this.getWide = function () {
+            return this.b;
+        }
+
+        this.getSquare = function () {
+            return this.S ;
+        }
+
+       this.getPerimeter =  function () {
+            return this.P;
+        }
+    }
+    // function createRectangle() {
+    //     let ctx = document.getElementById("myCanvas").getContext("2d");
+    //         ctx.beginPath();
+    //         ctx.rect(5,6,7,8);
+    // }
+    let rectangle = new Rectangle(3,5);
+        rectangle.setLength(5);
+        rectangle.setWide(10);
+        rectangle.getLength();
+        rectangle.getWide();
+
+    S = rectangle.getSquare();
+    P = rectangle.getPerimeter();
+    document.write("The Square is : " + S+ "\n" + "The Perimeter: "+ P );
+    // createRectangle();
+
+</script>
+</body>
+</html>

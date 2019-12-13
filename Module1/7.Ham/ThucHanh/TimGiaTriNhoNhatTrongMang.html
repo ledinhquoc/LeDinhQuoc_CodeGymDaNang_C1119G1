@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TimGiaTriNhoNhatTronMang</title>
+    <style>
+        table {
+            font-family: Arial,monospace;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td, th {
+            border: #dddddd;
+            text-align: center;
+            padding:0.2px;
+        }
+        tr {
+            background: #FFFFFF;
+        }
+        button{
+            background: mediumpurple;
+            border: brown;
+            color: white;
+            padding: 10px 25px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: auto;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<script>
+    function minArray(arr) {
+        let min = arr[0];
+        for (i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+        }
+        return min ;
+    }
+    let arr1 = [3,5,-6,2,5,2];
+    let min = minArray(arr1);
+    alert(min);
+</script>
+</body>
+</html>

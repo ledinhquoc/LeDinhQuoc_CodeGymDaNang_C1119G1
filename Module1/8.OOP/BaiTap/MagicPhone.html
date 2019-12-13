@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Mobile() {
+        this.battery = 100;
+        this.txt = "";
+        this.messArivered = [];
+        this.sentMess = [];
+        this.messDraff = [];
+        this.mode = true;
+        this.turnOfOrOff = true;
+        this.pluggin = true;
+        this.getTxt = function () {
+            return this.txt;
+        }
+        this.setTxt = function (txt) {
+            this.txt = txt;
+        }
+        this.getMessDraff = function () {
+            return this.messDraff;
+        }
+        this.setMessDraff = function (txt) {
+            this.messDraff.push(txt);
+        }
+        this.createMess = function (txt) {
+            this.messDraff.push(txt);
+        }
+        this.arrivedMess = function (txt) {
+            this.messArivered.push(txt);
+        }
+        this.getArrivedMess = function () {
+            return this.messArivered;
+        }
+        this.showMess = function () {
+            let str = "";
+            for (let i = 0; i < this.messArivered.length; i++) {
+                str = this.messArivered[i] + "\n";
+            }
+            return str;
+        }
+        this.changeBattery = function () {
+            return this.battery--;
+        }
+        this.getBattery = function () {
+            return this.battery;
+        }
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        }
+    }
+
+    let nokia = new Mobile();
+    let iphone = new Mobile();
+
+    function f() {
+        let check = true;
+        if (nokia.mode) {
+            do {
+                let action1 = parseInt(prompt("Select option :" + "\n 1.Nokia " + "\n 2.Iphone " + "\n 3.Exit " + ""));
+                switch (action1) {
+                    case 1 :
+                        let check3 = true;
+                        do {
+                            let action = parseInt(prompt("Select option :" + "\n 1.show Messenger " + "\n 2.Send Messenger " + "\n 3.Check Battery " + "\n Exit"));
+                            switch (action) {
+                                case 1:
+                                    let str1 = "";
+                                    for (let i = 0; i < nokia.arrivedMess.length; i++) {
+                                        str1 += "messenger " + i + " " + nokia.messArivered;
+                                        nokia.changeBattery();
+                                    }
+                                    check3 = false;
+                                    alert(str1);
+                                    break;
+                                case 2 :
+                                    let input = prompt("Create Messenger :");
+                                    var r = confirm("Do you want send messener");
+                                    if (r) {
+                                        alert("sending");
+                                        iphone.arrivedMess(input);
+                                        nokia.changeBattery();
+                                    } else {
+                                        alert("messenger draff");
+                                        nokia.setMessDraff(input);
+                                        nokia.changeBattery();
+                                    }
+                                    check3 = false;
+                                    break;
+                                case 3:
+                                    alert(nokia.getBattery());
+                                    nokia.changeBattery();
+                                    check3 = false;
+                                    break;
+                                case 4 :
+                                    check3 = true;
+                            }
+                        } while (!check3);
+                        check = false;
+                        break;
+                    case 2 :
+                        let action11 = parseInt(prompt("Select option :" + "\n 1.show Messenger " + "\n 2.Send Messenger " + "\n 3.Check Battery " + "\n Exit"));
+                        switch (action11) {
+                            case 1:
+                                let str1 = "";
+                                for (let i = 0; i < iphone.arrivedMess.length; i++) {
+                                    str1 += "messenger " + i + " " + iphone.messArivered[i];
+                                    iphone.changeBattery();
+                                }
+                                alert(str1);
+                                break;
+                            case 2 :
+                                let input = prompt("Create Messenger :");
+                                var r = confirm("Do you want send messener");
+                                if (r) {
+                                    alert("sending");
+                                    nokia.arrivedMess(input);
+                                    iphone.changeBattery();
+                                } else {
+                                    alert("messenger draff");
+                                    iphone.setMessDraff(input);
+                                    iphone.changeBattery();
+                                }
+                                check = false;
+                                break;
+                            case 3:
+                                alert(iphone.getBattery());
+                                iphone.changeBattery();
+                        }
+                        break;
+                }
+            } while (!check);
+        }
+    }
+
+    f();
+</script>
+</body>
+</html>

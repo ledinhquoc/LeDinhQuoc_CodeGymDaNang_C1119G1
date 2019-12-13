@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ChuyenDoiGiuaFeetVaMeters</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>Unit</th>
+        <th>From Unit</th>
+    </tr>
+    <tr>
+        <form>
+            <td>
+                <input type="text" id="result" oninput=convert(this.value)
+                       onchange="convert(this.value)"><br></td>
+            <td>
+                <select id="ftm">
+                    <option value="FEET">FEET</option>
+                    <option value="METERS">METERS</option>
+                </select>
+            </td>
+        </form>
+    </tr>
+</table >
+<p id="demo"><p>
+<script>
+    let ftm1 = document.getElementById("ftm");
+    let mtf1 = document.getElementById("mtf");
+    let result = document.getElementById("result").value *1;
+    function feetToMeters(feet) {
+        return 0.305 * feet;
+    }
+    function metersToFeet(meters) {
+        return 3.279 * meters ;
+    }
+
+    function convert(num) {
+        if (ftm1.value === "METERS") {
+            document.getElementById("demo").innerText = feetToMeters(num);
+        } else
+            document.getElementById("demo").innerText = metersToFeet(num);
+
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demoYC5</title>
+</head>
+<body>
+<script>
+    let customerName = [];
+    let customerEmail = [];
+    let idCard = [];
+    let customerBirthday = [];
+    let numberOfAccompanying = [];
+    let typeRoom = [];
+    let rentDay = [];
+    let typeCustomer = [];
+    let addressCustomer = [];
+    let discount = [];
+    let typeService = [];
+    let checkEdit = false;
+    let menu1;
+
+    showMenu1();
+
+    function showMenu1() {
+        menu1 = prompt("Please choose option you want : "
+            + "\n1. Add new customer "
+            + "\n2. Display information customer"
+            + "\n3. Edit information customer"
+            + "\n4. Delete customer"
+            + "\n5. Exit");
+        switch (menu1) {
+            case "1":
+                addInformationCustomer();
+                break;
+            case "2":
+                displayCustomer();
+                break;
+            case "3":
+                editInformationCustomer();
+                break;
+            case "4":
+                deleteCustomer();
+                break;
+            case "5":
+                return ;
+            default:
+                alert("failed");
+                showMenu1();
+        }
+    }
+
+    function addInformationCustomer() {
+        customerName.push(prompt("Enter name customer : "));
+        customerEmail.push(prompt("Enter email customer : "));
+        idCard.push(prompt("Enter ID customer : "));
+        customerBirthday.push(prompt("Enter birthday customer : "));
+        numberOfAccompanying.push(prompt("Enter NOA customer : "));
+        typeRoom.push(prompt("Enter typeRoom : "));
+        rentDay.push(prompt("Enter rentDay : "));
+        typeCustomer.push(prompt("Enter typeCustomer : "));
+        addressCustomer.push(prompt("Enter address customer : "));
+        discount.push(prompt("Enter discount : "));
+        typeService.push(prompt("Enter type service : "
+            + "\n1. Villa"
+            + "\n2. House"
+            + "\n3. Room"));
+        showMenu1();
+    }
+    function editInformationCustomer() {
+        checkEdit = true;
+        displayCustomer();
+    }
+    function deleteCustomer() {
+        let del = prompt(chooseInformationCustomer()+"\n"+(customerName.length + 1) +". Back"  );
+        if(parseInt(del) === (customerName.length +1 )){
+            showMenu1();
+        }
+        customerName.splice(parseInt(del) -1 ,1);
+        customerEmail.splice(parseInt(del) -1 ,1);
+        idCard.splice(parseInt(del) -1 ,1);
+        customerBirthday.splice(parseInt(del) -1 ,1);
+        numberOfAccompanying.splice(parseInt(del) -1 ,1);
+        typeRoom.splice(parseInt(del) -1 ,1);
+        rentDay.splice(parseInt(del) -1 ,1);
+        typeCustomer.splice(parseInt(del) -1 ,1);
+        addressCustomer.splice(parseInt(del) -1 ,1);
+        discount.splice(parseInt(del) -1 ,1);
+        typeService.splice(parseInt(del) -1 ,1);
+
+        displayCustomer();
+    }
+
+    function displayCustomer() {
+        let show = prompt(chooseInformationCustomer() + "\n" + (customerName.length+1)+ "\n" +  ". Back to menu");
+        show--;
+        switch (show) {
+            case(customerName.length):
+                checkEdit = false;
+                showMenu1();
+                break;
+            default:
+                if (checkEdit){
+                    checkEdit = false;
+                    prompt(displayInformationCustomer(show));
+                    switch (parseInt(displayInformationCustomer(show)+1)) {
+                        case 1:
+                            customerName[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 2 :
+                            customerEmail[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 3 :
+                            idCard[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 4 :
+                            customerBirthday[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 5 :
+                            numberOfAccompanying[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 6:
+                            typeRoom[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 7:
+                            rentDay[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 8:
+                            typeCustomer[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 9:
+                            addressCustomer[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 10 :
+                            discount[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        case 11:
+                            typeService[show] = prompt("Enter info you want to edit: ");
+                            showMenu1();
+                            break;
+                        default:
+                            alert("failed");
+                            showMenu1();
+                    }
+                }else{
+                    alert(displayInformationCustomer(show));
+                }
+        }
+        showMenu1();
+    }
+
+    function chooseInformationCustomer() {
+        let listing = "";
+        for (let i = 0; i <= customerName.length - 1 && i <= idCard.length - 1; i++) {
+            listing += i + 1 + "." + "Name: " + customerName[i] + "\n" + "ID: " + idCard[i];
+        }
+        return listing;
+    }
+
+    function displayInformationCustomer(position) {
+        return "1. Name: " + customerName[position] + "\n"
+            + "2. Email: " + customerEmail[position] + "\n"
+            + "3. idCard: " + idCard[position] + "\n"
+            + "4. birthday: " + customerBirthday[position] + "\n"
+            + "5. NOA: " + numberOfAccompanying[position] + "\n"
+            + "6. typeRoom: " + typeRoom[position] + "\n"
+            + "7. rentDay: " + rentDay[position] + "\n"
+            + "8. typeCustomer: " + typeCustomer[position] + "\n"
+            + "9. addressCustomer: " + addressCustomer[position] + "\n"
+            + "10. discount: " + discount[position] + "\n"
+            + "11. typeService: " + typeService[position];
+
+    }
+
+
+</script>
+</body>
+</html>

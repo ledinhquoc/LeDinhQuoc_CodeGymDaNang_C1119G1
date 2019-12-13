@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UngDungFakingTakeAreaOnTyping</title>
+</head>
+<body>
+<textarea id="txt" onkeydown="f(event)">
+
+</textarea>
+<script>
+    let x;
+    x = document.getElementById("txt");
+    let str = "happy new year";
+    let count = 0;
+
+    function f(event) {
+        event.preventDefault();
+        x.value += str.charAt(count);
+        count++;
+
+        if (count === str.length +1){
+            count = 0 ;
+            x.value = "";
+        }
+    }
+</script>
+</body>
+</html>

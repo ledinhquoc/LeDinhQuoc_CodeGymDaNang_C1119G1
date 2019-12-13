@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTapTuDIen</title>
+</head>
+<body>
+<script>
+    let count = true;
+    let str = prompt("nhap chu can dich: ");
+    let VNI = ["xin chào","tạm biệt","chúc ngủ ngon"];
+    let ENG = ["hello","good bye","good night"];
+    for (x = 0 ; x < str.length; x++){
+        if (str === VNI[x]) {
+            document.write(ENG[x]);
+            break;
+        }else if (str === ENG[x]) {
+            document.write(VNI[x]);
+            break;
+        }else {
+        document.write("khong tim thay");
+        break;
+        }
+    }
+
+</script>
+</body>
+</html>

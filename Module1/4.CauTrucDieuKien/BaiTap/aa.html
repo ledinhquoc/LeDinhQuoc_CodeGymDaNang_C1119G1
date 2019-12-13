@@ -2,15 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>demo</title>
 </head>
 <body>
 <script>
-    let count = 0;
-    while (count++ < 10) {
-        count++;
+    let iMax = 20;
+    let jMax = 10;
+    let f = [];
+
+    for (i = 0; i < iMax; i++) {
+        f[i] = [];
+        for (j = 0; j < jMax; j++) {
+            f[i][j] = 0;
+        }
     }
-    console.log(count);
+        alert(f.length);
+
+
 </script>
 
 </body>

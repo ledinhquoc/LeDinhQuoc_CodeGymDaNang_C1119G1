@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài5</title>
+</head>
+<body>
+<script>
+    let stars  = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let stars2 = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function processStar(starName){
+        for (var i=0; i < stars.length; i++) {
+            if(starName === stars[i]){
+                return stars2[i];
+            }
+        }
+
+        return "No star found!";
+
+    }
+
+    var getStar = prompt("Input the star name.");
+    var result = processStar(getStar);
+    alert(result);
+</script>
+</body>
+</html>

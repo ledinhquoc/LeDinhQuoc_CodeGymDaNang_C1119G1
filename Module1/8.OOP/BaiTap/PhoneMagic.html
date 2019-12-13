@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhoneMagic</title>
+</head>
+<body>
+<script>
+function Phone() {
+   let menu1 = prompt("Select phone :" + "\n 1.Nokia " + "\n 2.Iphone " + "\n 3.Exit " + "");
+   let menu2 = prompt("Select option :" + "\n 1.show Messenger " + "\n 2.Send Messenger " + "\n 3.Check Battery " + "\n Exit");
+    this.battery = 100;
+    this.text = "";
+    this.draft = [];
+    this.inbox = [];
+    this.sent = [];
+    this.mode = true;
+    this.plugin = true;
+    this.menu1 = menu1;
+    this.menu2 = menu2;
+
+    this.displayInbox = function () {
+        let display1 = "";
+        for (i = 0; i <= this.inbox -1; i++){
+            display1 += i + 1 + "." + this.inbox[i] + "\n";
+        }return display1;
+    };
+    this.displaySent = function () {
+        let display2 = "";
+        for (i = 0; i <= this.inbox -1; i++){
+            display2 += i + 1 + "." + this.sent[i] + "\n";
+        }return display2;
+    };
+    this.displayDraft = function () {
+        let display3 = "";
+        for (i = 0; i <= this.inbox -1; i++){
+            display3 += i + 1 + "." + this.draft[i] + "\n";
+        }return display3;
+    };
+
+    this.showMenu1 = function () {
+        return this.menu1;
+    };
+    this.showMenu2 = function () {
+        return this.menu2;
+    };
+
+    this.getText = function () {
+        return this.text;
+    };
+    this.setText = function (text) {
+        this.text = text;
+    };
+    this.getDraft = function () {
+        return this.draft;
+    };
+    this.setDraft = function (text) {
+         this.draft.push(text);
+    };
+    this.createSms = function (text) {
+        this.draft.push(text);
+    };
+    this.ArriveSms = function (text) {
+        this.inbox.push(text);
+    };
+    this.getArriveSms = function () {
+        return this.inbox ;
+    };
+    this.changeBattery = function () {
+        return this.battery-- ;
+    };
+    this.getBattery = function () {
+        return this.battery;
+    };
+    this.setBattery = function (battery) {
+        this.battery = battery;
+    };
+};
+
+let noKia = new Phone();
+let iPhone = new Phone();
+
+        function f() {
+            let check = true;
+            if (noKia.mode){
+                do {
+                    switch (noKia.showMenu1()) {
+                        case 1:
+                            let checkSwitch1 = true ;
+                            do {
+                                switch (noKia.showMenu2()) {
+                                    case 1:
+                                        let str1 = "";
+                                        for (let i = 0; i < noKia.ArriveSms.length ; i++){
+                                            str1 += noKia.displayInbox() + noKia.ArriveSms;
+                                            noKia.changeBattery();
+                                        }
+                                        alert(noKia.displayInbox());
+                                        checkSwitch1 = false;
+                                }
+                            }while (!checkSwitch1);
+                            check = false;
+                            break;
+                                case 2:
+                                        switch (iPhone.showMenu2()) {
+                                            case 1:
+                                                let str1 = "";
+                                                for (let i = 0; i < iPhone.ArriveSms.length ; i++){
+                                                    str1 += iPhone.displayInbox() + iPhone.ArriveSms;
+                                                    iPhone.changeBattery();
+                            }
+                                                alert(iPhone.displayInbox());
+                                                break;
+                                            case 2:
+                                                let input = prompt("Type a message: ");
+                                                 let cf = confirm("Send this message ?");
+                                                if (cf){
+                                                alert("sending");
+                                                iPhone.ArriveSms(input);
+                                                iPhone.changeBattery();
+                                                }
+                                                check = false ;
+                                                break;
+
+                                        }
+                    }
+                }while(!check);
+
+            }
+        }
+</script>
+</body>
+</html>

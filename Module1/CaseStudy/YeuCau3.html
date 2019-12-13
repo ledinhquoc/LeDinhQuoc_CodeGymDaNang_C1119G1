@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>YeuCau1</title>
+</head>
+<body>
+
+<script>
+    //Validate Name
+    var name = prompt("Enter your name: ");
+    var name1 = "";
+
+    if (name.charAt(0) !== " ") {
+        name1 += name.charAt(0).toLocaleUpperCase();
+    }
+    for (let i = 0; i < name.length; i++) {
+        if (name.charAt(i) !== " ") {
+            if (name.charAt(i - 1) === " ") {
+                name1 += name.charAt(i).toLocaleUpperCase();
+            } else {
+                name1 += name.charAt(i).toLocaleLowerCase();
+            }
+            if (name.charAt(i + 1) === " ") {
+                name1 += " ";
+            }
+        }
+    }
+    name = name1;
+
+    // Validate ID
+    let validateID;
+    let iD;
+    do {
+         validateID = false;
+         iD = prompt("Enter your identification :")*1;
+        if (isNaN(iD)) {
+            alert("You entered wrong validation of your ID. Please try again");
+            continue;
+        }
+        iD = (Number.parseFloat(iD));
+        if (!Number.isInteger(iD)) {
+            alert("You entered wrong validation of your ID. Please try again");
+            continue;
+        }
+        if (iD >= 100000000 && iD <= 999999999) {
+            validateID = true;
+        }else{
+            alert("You entered wrong validation of your ID. Please try again");
+        }
+    } while (!validateID) ;
+        // Validate Birthday
+        var birthday;
+        var validateBirthday = true;
+        do {
+            if (validateBirthday) {
+                birthday = prompt("Enter your birthday: ");
+            } else {
+                birthday = prompt("You entered wrong validation of your birthday. Please try again");
+            }
+            let array = birthday.split("/");
+            if (!Number.isInteger(parseInt(array[0])) ||
+                !Number.isInteger(parseInt(array[1])) ||
+                !Number.isInteger(parseInt(array[2]))) {
+                validateBirthday = false;
+                continue;
+            }
+            if (Number(array[0]) > 31 ||
+                Number(array[0]) < 0 ||
+                Number(array[1]) < 1 ||
+                Number(array[1]) > 12 ||
+                Number(array[2]) < 1940 ||
+                Number(array[2]) > 2005) {
+                validateBirthday = false;
+                continue;
+            }
+            validateBirthday = true;
+        } while (!validateBirthday);
+
+        // Validate Email
+        let email;
+        let validateEmail = true;
+
+        do {
+            if (validateEmail) {
+                email = prompt("Enter your email: ");
+            } else {
+                email = prompt("You entered wrong validation of your email. Please try again");
+            }
+
+            let atpos = email.indexOf("@");
+            let atdot = email.lastIndexOf(".");
+
+            if (atpos < 0 || atdot < 0 || atpos > atdot || atdot === email.length -1 ||(atpos+1) !== atdot) {
+                validateEmail = false;
+                continue;
+            }
+            validateEmail = true;
+        } while (!validateEmail);
+
+        //Validate Discount
+        let discount;
+        let validateDiscount;
+        do {
+            validateDiscount = false;
+            discount = prompt("Enter your discount: ");
+
+        if (!isNaN(discount))  {
+            discount = Number.parseFloat(discount);
+            if (discount >= 0 ){
+                validateDiscount = true;
+            }
+        }
+        if (!validateDiscount){
+            alert("You entered wrong validation of discount. Please try again")
+        }
+    } while (!validateDiscount);
+        // Validate NumPeople
+
+    let numPeople;
+    let validateNum;
+        do {
+             validateNum = false;
+                numPeople = prompt("Enter your number of accompanying: ");
+
+            if (!isNaN(numPeople))  {
+                numPeople = Number.parseFloat(numPeople);
+                if (numPeople >= 0 && Number.isInteger(numPeople)){
+                    validateNum = true;
+                }
+            }
+            if (!validateNum){
+                alert("You entered wrong validation of number of accompanying. Please try again")
+            }
+        } while (!validateNum);
+
+        //Validate RentDay
+        let rentDay;
+        let validateRentDay;
+    do {
+        validateRentDay = false;
+        rentDay = prompt("Enter your number of rentday: ");
+
+        if (!isNaN(rentDay))  {
+            rentDay = Number.parseFloat(rentDay);
+            if (rentDay > 0 && Number.isInteger(rentDay)){
+                validateRentDay = true;
+            }
+        }
+        if (!validateRentDay){
+            alert("You entered wrong validation of Rentday. Please try again")
+        }
+    } while (!validateRentDay);
+
+        //Validate Address
+        var address = prompt("Enter your address: ");
+        var address1 = "";
+
+        if (address.charAt(0) !== " ") {
+            address1 += address.charAt(0).toLocaleUpperCase();
+        }
+        for (let i = 0; i < address.length; i++) {
+            if (address.charAt(i) !== " ") {
+                if (address.charAt(i - 1) === " ") {
+                    address1 += address.charAt(i).toLocaleUpperCase();
+                } else {
+                    address1 += address.charAt(i).toLocaleLowerCase();
+                }
+                if (address.charAt(i + 1) === " ") {
+                    address1 += " ";
+                }
+            }
+        }
+        address = address1;
+
+        //Validate typeMember
+        var typeMember = prompt("Enter your typeMember: ");
+        typeMember1 = "";
+
+        if (typeMember.charAt(0) !== " ") {
+            typeMember1 += typeMember.charAt(0).toLocaleUpperCase();
+        }
+        for (let i = 0; i < typeMember.length; i++) {
+            if (typeMember.charAt(i) !== " ") {
+                if (typeMember.charAt(i - 1) === " ") {
+                    typeMember1 += typeMember.charAt(i).toLocaleUpperCase();
+                } else {
+                    typeMember1 += typeMember.charAt(i).toLocaleLowerCase();
+                }
+                if (typeMember.charAt(i + 1) === " ") {
+                    typeMember1 += " ";
+                }
+            }
+        }
+        typeMember = typeMember1;
+
+        let typeOfService = prompt("Type of Service : " + " \n1. Villa" + " \n2. House" + " \n3 .Room");
+        let typeOfRoom = prompt("Type of Room : " + " \n1. Vip" + " \n2. Business" + " \n3. Normal");
+        let money;
+        if (typeOfService === "Villa") {
+            money = 500 * rentDay * (1 - discount / 100);
+        } else if (typeOfService === "House") {
+            money = 300 * rentDay * (1 - discount / 100);
+        } else
+            money = 100 * rentDay * (1 - discount / 100);
+        alert("Name " + name + "\nID : " + iD + "\nDay Of Birth : " + birthday + "\nEmail: " + email +
+            "\nAddress : " + address + "\nType of Member : " + typeMember + "\nDiscount : " + discount + "\nAmount of People : " + numPeople
+            + "\nRent Day : " + rentDay + "\nType of Service : " + typeOfService + "\nType of Room : " + typeOfRoom + "\nMoney : " + money);
+</script>
+</body>
+</html>

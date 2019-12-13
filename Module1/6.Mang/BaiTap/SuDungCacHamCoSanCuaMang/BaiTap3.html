@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BaiTap3</title>
+</head>
+<body>
+<script>
+        let str = prompt("nhap chu: ");
+        let UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let result = [];
+
+        for (let x = 0; x < str.length ; x++) {
+            if (UPPER.indexOf(str.charAt(x)  ) !== -1) {
+                result.push(str.charAt(x).toLocaleLowerCase());
+            }else {
+                result.push(str.charAt(x).toLocaleUpperCase());
+            }
+        }
+        alert(result.join(""));
+</script>
+</body>
+</html>
