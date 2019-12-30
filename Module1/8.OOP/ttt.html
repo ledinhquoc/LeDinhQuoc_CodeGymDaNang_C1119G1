@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrEmployee = [];
+    let currentAccount = "";
+
+    let Employee = function () {
+        this.setName = function (name) {
+            this.name = name;
+        };
+        this.getName = function () {
+            return this.name;
+        };
+        this.setAddress = function (address) {
+            this.address = address;
+        };
+        this.getAddress = function () {
+            return this.address
+        };
+        this.setUsername = function (userName) {
+            this.userName = userName;
+        };
+        this.getUsername = function () {
+            return this.userName;
+        };
+        this.setPassword = function (password) {
+            this.password = password;
+        };
+        this.getPassword = function () {
+            return this.password;
+        };
+    };
+
+    function displayMainMenu() {
+        var number = prompt("Please! Do you want to choose type service?\n"
+            + "1. Register.\n"
+            + "2. Login.\n"
+            + "3. Exit.\n");
+        switch (number) {
+            case "1":
+                addNewEmployee();
+                break;
+            case "2":
+                login();
+                break;
+            case "3":
+                return;
+            default:
+                displayMainMenu();
+        }
+    }
+
+    function addNewEmployee() {
+        let employee = new Employee();
+        employee.setName(prompt("Enter name :   "));
+        employee.setAddress(prompt("Enter Address :   "));
+        employee.setUsername(prompt("Enter Username :   "));
+        employee.setPassword(prompt("Enter Password :   "));
+        arrEmployee.push(employee);
+        displayMainMenu();
+    }
+
+    function login() {
+        let username = (prompt("Enter Username :   "));
+        let password = (prompt("Enter Password :   "));
+        let check = false;
+        for (let i = 0; i < arrEmployee.length; i++) {
+            if (username === arrEmployee[i].getUsername() && password === arrEmployee[i].getPassword()) {
+                currentAccount = username;
+                check = true;
+                break;
+            }
+        }
+        if (check) {
+            alert("login complete");
+            displayMainMenu2(username,check);
+        } else {
+            alert("Error!");
+            displayMainMenu();
+        }
+    }
+
+    function displayMainMenu2(username,check) {
+        var number = prompt("Please! Do you want to choose type service?\n"
+            + "1. Show Information.\n"
+            + "2. Logout.\n"
+            + "3. Exit.\n");
+        switch (number) {
+            case "1":
+                if (check) {
+                    for (let i = 0; i < arrEmployee.length; i++) {
+                        if (username === arrEmployee[i].getUsername()) {
+                            alert("Name: " + arrEmployee[i].getName() + "\n"
+                                + "Address: " + arrEmployee[i].getAddress() + "\n"
+                                + "Username: " + arrEmployee[i].getUsername() + "\n"
+                                + "Password: " + arrEmployee[i].getPassword());
+                            displayMainMenu2(username);
+                    }
+                }
+                } else {
+                    alert("Error!");
+                    displayMainMenu();
+                }
+                break;
+            case "2":
+                displayMainMenu();
+                break;
+            case "3":
+                return;
+            default:
+                displayMainMenu();
+        }
+    }
+
+    displayMainMenu();
+
+    // let number = prompt("nhap vao so 6 chu so : ");
+    //     alert(isCheckNumber(number));
+    //
+    // function isCheckNumber(num) {
+    //     let sum = 0 ;
+    //     let multiply = 1;
+    //     for ( let i = 0; i < num.length;i++ ){
+    //         if (i < 3 ){
+    //             multiply *= num[i];
+    //         }else {
+    //             sum += parseInt(num[i]);
+    //         }
+    //     }
+    //     return sum === multiply;
+    // }
+</script>
+</body>
+</html>

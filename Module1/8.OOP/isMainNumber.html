@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arrScore = [1,-500,200,2,200];
+    function findMaxScore(arr) {
+        let max = arr[0];
+        for(var i =1;i<arr.length;i++){
+            if(max <arr[i]){
+                max=arr[i];
+            }
+        }
+        return arr.lastIndexOf(max);
+    }
+    alert(findMaxScore(arrScore))
+</script>
+</body>
+</html>

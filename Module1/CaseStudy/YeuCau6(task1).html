@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let listCustomers = [];
+
+    let editflag = false;
+
+    //#region Định nghĩa lớp Customers
+    let Customer = function () {
+        this.setNameCustomer = function (name) {
+            this.name = name;
+        };
+        this.setIdentityCard = function (identityCard) {
+            this.identityCard = identityCard;
+        };
+        this.setBirthdayCustomer = function (birthDay) {
+            this.birthDay = birthDay;
+        };
+        this.setEmailCustomer = function (email) {
+            this.email = email;
+        };
+        this.setAddressCustomer = function (address) {
+            this.adress = address;
+        };
+        this.setTypeCustomer = function (typeCustomer) {
+            this.typeCustomer = typeCustomer;
+        };
+        this.setDiscount = function (discount) {
+            this.discount = discount;
+        };
+        this.setNumberOfAccompanying = function (numberOfAccompanying) {
+            this.numberOfAccompanying = numberOfAccompanying;
+        };
+        this.setTypeRoom = function (typeRoom) {
+            this.typeRoom = typeRoom;
+        };
+        this.setRentDays = function (rentDays) {
+            this.rentDays = rentDays;
+        };
+        this.setTypeService = function (typeService) {
+            this.typeService = typeService;
+        };
+
+        this.getNameCustomer = function () {
+            return this.name;
+        };
+        this.getIdentityCard = function () {
+            return this.identityCard;
+        };
+        this.getBirthdayCustomer = function () {
+            return this.birthDay;
+        };
+        this.getEmailCustomer = function () {
+            return this.email;
+        };
+        this.getAddressCustomer = function () {
+            return this.adress
+        };
+        this.getTypeCustomer = function () {
+            return this.typeCustomer;
+        };
+        this.getDiscount = function () {
+            return this.discount;
+        };
+        this.getNumberOfAccompanying = function () {
+            return this.numberOfAccompanying;
+        };
+        this.getTypeRoom = function () {
+            return this.typeRoom;
+        };
+        this.getRentDays = function () {
+            return this.rentDays;
+        };
+        this.getTypeService = function () {
+            return this.typeService;
+        };
+        this.getTotalPays = function () {
+            return (totalPays = 500 * Number.parseInt(this.rentDays)
+                * (1 - Number.parseFloat(this.discount) / 100));
+        };
+    };
+    //#endregion
+
+    //#region Hiển thị menu chính
+    function displayMainMenu() {
+        choose = prompt(
+            "1. Add New Customer\n"
+            + "2. Display Information Customer\n"
+            + "3. Display Total Of Customer\n"
+            + "4. Edit Information Customer\n"
+            + "5. Delete Customer\n"
+            + "6. Exit\n");
+        switch (choose) {
+            case "1":
+                addNewCustomer();
+                break;
+            case "2":
+                displayInformationCustomer();
+                break;
+            case "3":
+                displayTotalPayOfCustomer();
+                break;
+            case "4":
+                editInformationCustomer();
+                break;
+            case "5":
+                deleteInformationCustomer();
+                break;
+            case "6":
+                return;
+            default:
+                alert("failed!");
+                displayMainMenu();
+        }
+    }
+
+    //#endregion
+
+    //#region Thêm mới khách hàng
+    function addNewCustomer() {
+        let customer = new Customer();
+        customer.setNameCustomer(prompt("Enter Name Customer:"));
+        customer.setIdentityCard(prompt("Enter Id Card Customer:"));
+        customer.setBirthdayCustomer((prompt("Enter Birthday Customer (dd/MM/YYYY):")));
+        customer.setEmailCustomer((prompt("Enter email Customer:")));
+        customer.setAddressCustomer(prompt("Enter Address Customer:"));
+        customer.setTypeCustomer(prompt("Enter Type Customer:"));
+        customer.setDiscount(prompt("Enter Discount"));
+        customer.setNumberOfAccompanying(prompt("Enter Number Of Accompanying:"));
+        customer.setTypeRoom(prompt("Enter Type Room:"));
+        customer.setRentDays(prompt("Enter Rent Days:"));
+        customer.setTypeService(prompt("Enter Type Service:"));
+
+        listCustomers.push(customer);
+        displayMainMenu();
+    }
+    //#endregion
+
+    //#region Hiển thị thông tin khách hàng
+
+    function displayInformationCustomer() {
+
+        let choose = prompt("Vui lòng chọn khách hàng! \n"
+            + getNameAndIdentityCard() + "\n"
+            + (listCustomers.length + 1) + " .Back to menu");
+        choose--;
+        if (choose >= 0 && choose < listCustomers.length) {
+            switch (choose) {
+                case (listCustomers.length):
+                    displayMainMenu();
+                    break;
+                default:
+                    displayCustomer(choose);
+            }
+        }
+        displayMainMenu();
+    }
+
+    function getNameAndIdentityCard() {
+        let result = "";
+        for (let i = 0; i < listCustomers.length; i++) {
+            result += i + 1 + ". " + "Name: "
+                + listCustomers[i].getNameCustomer()
+                + " - " + "ID: " + listCustomers[i].getIdentityCard() + "\n";
+        }
+        return result;
+    }
+
+    function displayCustomer(index) {
+        if (editflag) {
+            let numberInfo = prompt(getInformationCustomer(index));
+            editflag = false;
+            switch (parseInt(numberInfo)) {
+                case 1:
+                    listCustomers[numberInfo - 1].setNameCustomer(prompt("Enter name you want edit!"));
+                    break;
+                case 2:
+                    listCustomers[numberInfo - 1].setIdentityCard(prompt("Enter name you want edit!"));
+                    break;
+                case 3:
+                    listCustomers[numberInfo - 1].setBirthdayCustomer(prompt("Enter name you want edit!"));
+                    break;
+                case 4:
+                    listCustomers[numberInfo - 1].setEmailCustomer(prompt("Enter name you want edit!"));
+                    break;
+                case 5:
+                    listCustomers[numberInfo - 1].setAddressCustomer(prompt("Enter name you want edit!"));
+                    break;
+                case 6:
+                    listCustomers[numberInfo - 1].setTypeCustomer(prompt("Enter name you want edit!"));
+                    break;
+                case 7:
+                    listCustomers[numberInfo - 1].setDiscount(prompt("Enter name you want edit!"));
+                    break;
+                case 8:
+                    listCustomers[numberInfo - 1].setNumberOfAccompanying(prompt("Enter name you want edit!"));
+                    break;
+                case 9:
+                    listCustomers[numberInfo - 1].setTypeRoom(prompt("Enter name you want edit!"));
+                    break;
+                case 10:
+                    listCustomers[numberInfo - 1].setRentDays(prompt("Enter name you want edit!"));
+                    break;
+                case 11:
+                    listCustomers[numberInfo - 1].setTypeService(prompt("Enter name you want edit!"));
+                    break;
+                case 12:
+                    //listCustomers[numberInfo - 1].getTotalPays(prompt("Enter name you want edit!"));
+                    break;
+                case 13:
+                    displayMainMenu();
+                    break;
+                default:
+                    alert("failed");
+                    displayMainMenu();
+            }
+        } else {
+            alert(getInformationCustomer(index));
+        }
+    }
+
+    function getInformationCustomer(index) {
+        if (editflag) {
+            return "1. Name: " + " " + listCustomers[index].getNameCustomer() + "\n"
+                + "2. ID Card: " + " " + listCustomers[index].getIdentityCard() + "\n"
+                + "3. Birthday: " + " " + listCustomers[index].getBirthdayCustomer() + "\n"
+                + "4. Email: " + " " + listCustomers[index].getEmailCustomer() + "\n"
+                + "5. Address: " + " " + listCustomers[index].getAddressCustomer() + "\n"
+                + "6. Type Customer: " + " " + listCustomers[index].getTypeCustomer() + "\n"
+                + "7. Discount: " + " " + listCustomers[index].getDiscount() + "\n"
+                + "8. Number Of Accompanying: " + " " + listCustomers[index].getNumberOfAccompanying() + "\n"
+                + "9. Type Room: " + " " + listCustomers[index].getTypeRoom() + "\n"
+                + "10. Rent Days: " + " " + listCustomers[index].getRentDays() + "\n"
+                + "11. Type Service: " + " " + listCustomers[index].getTypeService() + "\n"
+                + "12. TotalPays: " + " " + listCustomers[index].getTotalPays() + "\n"
+                + "13. Back";
+        } else {
+            return "1. Name: " + " " + listCustomers[index].getNameCustomer() + "\n"
+                + "2. ID Card: " + " " + listCustomers[index].getIdentityCard() + "\n"
+                + "3. Birthday: " + " " + listCustomers[index].getBirthdayCustomer() + "\n"
+                + "4. Email: " + " " + listCustomers[index].getEmailCustomer() + "\n"
+                + "5. Address: " + " " + listCustomers[index].getAddressCustomer() + "\n"
+                + "6. Type Customer: " + " " + listCustomers[index].getTypeCustomer() + "\n"
+                + "7. Discount: " + " " + listCustomers[index].getDiscount() + "\n"
+                + "8. Number Of Accompanying: " + " " + listCustomers[index].getNumberOfAccompanying() + "\n"
+                + "9. Type Room: " + " " + listCustomers[index].getTypeRoom() + "\n"
+                + "10. Rent Days: " + " " + listCustomers[index].getRentDays() + "\n"
+                + "11. Type Service: " + " " + listCustomers[index].getTypeService() + "\n"
+                + "12. TotalPays: " + " " + listCustomers[index].getTotalPays() + "\n";
+        }
+    }
+
+    //#endregion
+
+    //#region Sửa thông tin khách hàng
+    function editInformationCustomer() {
+        editflag = true;
+        displayInformationCustomer();
+    }
+
+    //#endregion
+
+    //#region Xóa thông tin khách hàng
+    function deleteInformationCustomer() {
+        let numRemove = prompt(getNameAndIdentityCard() + "\n" + (listCustomers.length + 1) + " .Back ");
+        if (parseInt(numRemove) === (listCustomers.length + 1)) {
+            displayMainMenu();
+        }
+        listCustomers.splice(numRemove - 1, 1);
+        displayMainMenu();
+    }
+
+    //#endregion
+
+    //#region Hiển thị tổng tiền cần thanh toán của khách hàng
+    function displayTotalPayOfCustomer() {
+        let numRemove = prompt(getNameAndIdentityCard() + "\n" + (listCustomers.length + 1) + " .Back ");
+        if (parseInt(numRemove) === (listCustomers.length + 1)) {
+            displayMainMenu();
+        }
+        alert("Tổng tiền thanh toán của: "
+            + listCustomers[numRemove - 1].getNameCustomer()
+            + " là: "
+            + listCustomers[numRemove - 1].getTotalPays());
+        displayMainMenu();
+    }
+
+    //#endregion
+
+    displayMainMenu();
+
+</script>
+
+</body>
+</html>

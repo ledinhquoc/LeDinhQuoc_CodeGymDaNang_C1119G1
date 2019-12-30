@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isMainNumber(number) {
+        let check = false;
+        for(let i = 1;i<=(number/2);i++){
+            if((i*i)===number){
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }
+    let input = prompt("input number : ");
+    if(isMainNumber(parseInt(input))){
+        alert("so chinh phuong")
+    }else
+        alert("khong phai so chinh phuong");
+</script>
+</body>
+</html>

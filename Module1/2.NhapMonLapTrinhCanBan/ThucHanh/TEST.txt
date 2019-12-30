@@ -1,0 +1,10 @@
+cho 1 m?ng các s? nguyên . (ko du?c s?p x?p m?ng)
+Hãy in ra m?ng con tang dài nh?t trong m?ng trên.
+N?u có 2 k?t qu? b?ng nhau hãy in ra m?ng tìm du?c cu?i cùng.
+
+vd : 
+[0,-1,-2,3,4,2,3,4,5]
+--> [2,3,4,5]
+vd: 
+[1,2,3,-1,0,1]
+--->[-1,0,1]

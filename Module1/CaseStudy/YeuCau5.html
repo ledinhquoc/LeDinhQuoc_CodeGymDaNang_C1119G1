@@ -68,13 +68,16 @@
         showMenu1();
     }
     function editInformationCustomer() {
-        checkEdit = true;
+        checkEdit = false;
         displayCustomer();
     }
     function deleteCustomer() {
         let del = prompt(chooseInformationCustomer()+"\n"+(customerName.length + 1) +". Back"  );
         if(parseInt(del) === (customerName.length +1 )){
             showMenu1();
+        }else {
+            alert("Customer not found");
+            displayCustomer();
         }
         customerName.splice(parseInt(del) -1 ,1);
         customerEmail.splice(parseInt(del) -1 ,1);
@@ -92,94 +95,106 @@
     }
 
     function displayCustomer() {
-        let show = prompt(chooseInformationCustomer() + "\n" + (customerName.length+1)+ "\n" +  ". Back to menu");
+        let show = prompt(chooseInformationCustomer() + "\n" + (customerName.length+1)+ "-" +  ". Back to menu");
         show--;
-        switch (show) {
-            case(customerName.length):
-                checkEdit = false;
-                showMenu1();
-                break;
-            default:
-                if (checkEdit){
-                    checkEdit = false;
-                    prompt(displayInformationCustomer(show));
-                    switch (parseInt(displayInformationCustomer(show)+1)) {
-                        case 1:
-                            customerName[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 2 :
-                            customerEmail[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 3 :
-                            idCard[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 4 :
-                            customerBirthday[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 5 :
-                            numberOfAccompanying[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 6:
-                            typeRoom[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 7:
-                            rentDay[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 8:
-                            typeCustomer[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 9:
-                            addressCustomer[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 10 :
-                            discount[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        case 11:
-                            typeService[show] = prompt("Enter info you want to edit: ");
-                            showMenu1();
-                            break;
-                        default:
-                            alert("failed");
-                            showMenu1();
-                    }
-                }else{
-                    alert(displayInformationCustomer(show));
+        for ( let i = 0; i <= customerName.length +1 ; i++ ) {
+            if (customerName.length === i) {
+                switch (show) {
+                    case(customerName.length):
+                        checkEdit = false;
+                        showMenu1();
+                        break;
+
+                    default:
+                        if (checkEdit) {
+                            checkEdit = false;
+                            prompt(displayInformationCustomer(show));
+                            switch (parseInt(displayInformationCustomer(show) + 1)) {
+                                case 1:
+                                    customerName[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 2 :
+                                    customerEmail[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 3 :
+                                    idCard[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 4 :
+                                    customerBirthday[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 5 :
+                                    numberOfAccompanying[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 6:
+                                    typeRoom[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 7:
+                                    rentDay[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 8:
+                                    typeCustomer[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 9:
+                                    addressCustomer[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 10 :
+                                    discount[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                case 11:
+                                    typeService[show] = prompt("Enter info you want to edit: ");
+                                    showMenu1();
+                                    break;
+                                default:
+                                    alert("failed");
+                                    showMenu1();
+                            }
+                        } else {
+                            alert(displayInformationCustomer(show));
+                        }
                 }
+                showMenu1();
+            } else {
+                break;
+            }
         }
         showMenu1();
+
     }
+
+
 
     function chooseInformationCustomer() {
         let listing = "";
         for (let i = 0; i <= customerName.length - 1 && i <= idCard.length - 1; i++) {
-            listing += i + 1 + "." + "Name: " + customerName[i] + "\n" + "ID: " + idCard[i];
+            listing += i + 1 + "."  +  "Name: " + customerName[i]  + "ID: " + idCard[i]+"\n";
         }
         return listing;
     }
 
     function displayInformationCustomer(position) {
-        return "1. Name: " + customerName[position] + "\n"
-            + "2. Email: " + customerEmail[position] + "\n"
-            + "3. idCard: " + idCard[position] + "\n"
-            + "4. birthday: " + customerBirthday[position] + "\n"
-            + "5. NOA: " + numberOfAccompanying[position] + "\n"
-            + "6. typeRoom: " + typeRoom[position] + "\n"
-            + "7. rentDay: " + rentDay[position] + "\n"
-            + "8. typeCustomer: " + typeCustomer[position] + "\n"
-            + "9. addressCustomer: " + addressCustomer[position] + "\n"
-            + "10. discount: " + discount[position] + "\n"
-            + "11. typeService: " + typeService[position];
 
+            return "1. Name: " + customerName[position] + "\n"
+                + "2. Email: " + customerEmail[position] + "\n"
+                + "3. idCard: " + idCard[position] + "\n"
+                + "4. birthday: " + customerBirthday[position] + "\n"
+                + "5. NOA: " + numberOfAccompanying[position] + "\n"
+                + "6. typeRoom: " + typeRoom[position] + "\n"
+                + "7. rentDay: " + rentDay[position] + "\n"
+                + "8. typeCustomer: " + typeCustomer[position] + "\n"
+                + "9. addressCustomer: " + addressCustomer[position] + "\n"
+                + "10. discount: " + discount[position] + "\n"
+                + "11. typeService: " + typeService[position]
+                + "12. BACK" ;
     }
 
 
