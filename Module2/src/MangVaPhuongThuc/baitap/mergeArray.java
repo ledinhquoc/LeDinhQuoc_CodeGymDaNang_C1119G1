@@ -28,7 +28,6 @@ public class mergeArray {
         }
         System.out.println();
         System.out.println("the new array is: ");
-        System.out.println("-------------------");
         for (s = 0; s < ab.length; s++) {
             System.out.println(ab[s] + " ");
         }
