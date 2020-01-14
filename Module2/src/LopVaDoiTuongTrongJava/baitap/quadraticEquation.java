@@ -14,13 +14,13 @@ public class quadraticEquation {
         System.out.println("enter your number c:");
         double c = input.nextDouble();
 
-        double result = b * b - 4 * a * c;
+        double delta = b * b - 4 * a * c;
 
-        if (result > 0.0) {
-            double x1 = (-b + Math.pow(result, 0.5)) / (2.0 * a);
-            double x2 = (-b - Math.pow(result, 0.5)) / (2.0 * a);
+        if (delta > 0.0) {
+            double x1 = (-b + Math.pow(delta, 0.5)) / (2.0 * a);
+            double x2 = (-b - Math.pow(delta, 0.5)) / (2.0 * a);
             System.out.println("nghiệm của phương trình là " + x1 + "và" + x2);
-        } else if (result == 0.0) {
+        } else if (delta == 0.0) {
             double x1 = -b / (2.0 * a);
             System.out.println("nghiệm của phương trình là :" + x1);
         } else {

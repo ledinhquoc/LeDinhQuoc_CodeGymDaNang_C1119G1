@@ -1,4 +1,4 @@
-package MangVaPhuongThuc.baitap;
+package MangVaPhuongThuc.thuchanh;
 
 import java.util.Scanner;
 

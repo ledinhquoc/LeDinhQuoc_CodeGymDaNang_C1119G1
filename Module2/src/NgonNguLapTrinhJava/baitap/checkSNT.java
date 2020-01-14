@@ -19,7 +19,7 @@ public class checkSNT {
                     }
                 }
                 if (dem == 20){
-                    System.out.println(" " + i);
+                    System.out.println(" " + dem);
                 }
             }
 

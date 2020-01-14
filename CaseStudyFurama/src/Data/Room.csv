@@ -1,0 +1,3 @@
+id,nameService,areaUsed,rentalCost,maxNumberOfCustomer,typeRent,freeService
+80a4cfa8045b4a62b4a1942ca2e1801b,R,21.0,21.0,8,Silver,Food
+39575f5fb1014ceaacee30d0a87db901,Ro,98.0,98.0,7,Ruby,massage

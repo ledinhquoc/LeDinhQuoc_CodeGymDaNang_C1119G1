@@ -18,6 +18,7 @@ public class findTheMinimumValue {
             Scanner input = new Scanner(System.in);
             System.out.println("enter your number");
             int array[] = new int[5];
+
             for (int i = 0; i < array.length; i++) {
                 array[i] = input.nextInt();
             }
