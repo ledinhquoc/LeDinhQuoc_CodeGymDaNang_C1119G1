@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Currency converter:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7cb2d985-1ae4-4dea-a527-418fa970a4e0" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="1XMqNwKLLsIjVuRLnjf7HxjWHeu" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.30" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.30" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment>
+        <artifact name="Currency converter:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Currency_converter_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Tomcat_9_0_30_Currency_converter" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Currency converter:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="Tomcat Server" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="Finished" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+            </expand>
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7cb2d985-1ae4-4dea-a527-418fa970a4e0" name="Default Changelist" comment="" />
+      <created>1580866274332</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1580866274332</updated>
+      <workItem from="1580866279254" duration="1780000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1024" height="214" key="GridCell.Tab.0.bottom" timestamp="1580868064033">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580868064033" />
+    <state width="1024" height="214" key="GridCell.Tab.0.center" timestamp="1580868064031">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580868064031" />
+    <state width="1024" height="214" key="GridCell.Tab.0.left" timestamp="1580868064031">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580868064031" />
+    <state width="1024" height="214" key="GridCell.Tab.0.right" timestamp="1580868064033">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580868064033" />
+    <state width="1024" height="214" key="GridCell.Tab.1.bottom" timestamp="1580868064036">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580868064036" />
+    <state width="1024" height="214" key="GridCell.Tab.1.center" timestamp="1580868064034">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1580868064034" />
+    <state width="1024" height="214" key="GridCell.Tab.1.left" timestamp="1580868064033">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1580868064033" />
+    <state width="1024" height="214" key="GridCell.Tab.1.right" timestamp="1580868064035">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1580868064035" />
+    <state width="1024" height="214" key="GridCell.Tab.2.bottom" timestamp="1580868064037">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580868064037" />
+    <state width="1024" height="214" key="GridCell.Tab.2.center" timestamp="1580868064037">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1580868064037" />
+    <state width="1024" height="214" key="GridCell.Tab.2.left" timestamp="1580868064036">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1580868064036" />
+    <state width="1024" height="214" key="GridCell.Tab.2.right" timestamp="1580868064037">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1024" height="214" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1580868064037" />
+    <state x="209" y="13" key="new project wizard" timestamp="1580868062422">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="13" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1580868062422" />
+  </component>
+</project>
