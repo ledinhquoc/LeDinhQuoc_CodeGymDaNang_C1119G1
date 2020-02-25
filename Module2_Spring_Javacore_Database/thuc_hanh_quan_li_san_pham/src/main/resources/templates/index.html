@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head">
+</head>
+<body>
+<h3>List Product</h3>
+<p>
+    <a th:href="@{/product/add}">
+        Add new Product
+    </a>
+</p>
+<p>
+    <a th:href="@{/showgiohang}">
+        view gio hang
+    </a>
+</p>
+<div class="notify">
+    <div th:if="${success}">
+        <span th:text="${success}"></span>
+    </div>
+</div>
+<table id = "products">
+    <thead>
+    <tr>
+        <th>STT</th>
+        <th>Name</th>
+        <th>Made in</th>
+        <th>Description</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="row,rowStat : ${products}">
+        <th th:text="${rowStat.index + 1}"></th>
+        <td th:text="${row.getProductName()}"></td>
+        <td th:text="${row.getMadeIn()}"></td>
+        <td th:text="${row.getDescription()}"></td>
+        <td  ><img th:src="${row.getImage()}" style="width: 300px;height: 200px"></td>
+        <td><a th:href="@{/product/{id}/view(id=${row.getId()})}">Detail</a></td>
+    </tr>
+    </tbody>
+</table>
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>
