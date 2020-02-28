@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce2ae261-2af1-4112-be53-c7a88a75d9b2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/DemoApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/Pagination/PaginationResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/Utils/Utils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/config/WebConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/controller/AdminController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/controller/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/dao/AccountDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/dao/OrderDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/dao/ProductDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/entity/Account.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/entity/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/entity/OrderDetail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/CartInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/CartLineInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/CustomerInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/OrderDetailInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/OrderInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/model/ProductInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/service/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/validator/CustomerForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/validator/CustomerFormValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/validator/ProductForm.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codgym/validator/ProductFormValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/403.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_header.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/_menu.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/accountInfo.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/order.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/orderList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/productList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shoppingCart.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shoppingCartConfirmation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shoppingCartCustomer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/shoppingCartFinalize.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/validation.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codgym/DemoApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/add.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../thuc_hanh_quan_li_san_pham/src/main/resources/templates/layout.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YHOLIbSpsDdzKBfUu6ScgXJ92B" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.codgym" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="SbShoppingCart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codgym.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce2ae261-2af1-4112-be53-c7a88a75d9b2" name="Default Changelist" comment="" />
+      <created>1582595995755</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582595995755</updated>
+      <workItem from="1582596002406" duration="25443000" />
+      <workItem from="1582650121539" duration="304000" />
+      <workItem from="1582680100031" duration="718000" />
+      <workItem from="1582683291787" duration="3656000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="80" key="#Inspections" timestamp="1582624682727">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="80" key="#Inspections/0.0.1536.834@0.0.1536.834" timestamp="1582624682727" />
+    <state x="524" y="228" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582614735385">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="524" y="228" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.834@0.0.1536.834" timestamp="1582614735385" />
+    <state x="838" y="218" key="#com.intellij.ide.util.MemberChooser" timestamp="1582615438927">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="838" y="218" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1582615438927" />
+    <state x="458" y="348" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1582684328499">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="458" y="348" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.834@0.0.1536.834" timestamp="1582684328499" />
+    <state x="571" y="308" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1582597929900">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="571" y="308" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages/0.0.1536.834@0.0.1536.834" timestamp="1582597929900" />
+    <state x="499" y="168" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1582619472852">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="168" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1536.834@0.0.1536.834" timestamp="1582619472852" />
+    <state width="441" height="466" key="DebuggerActiveHint" timestamp="1582685613675">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="441" height="466" key="DebuggerActiveHint/0.0.1536.834@0.0.1536.834" timestamp="1582685613675" />
+    <state x="549" y="176" key="FileChooserDialogImpl" timestamp="1582680221697">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="176" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1582680221697" />
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.0.center" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.0.left" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.0.right" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.1.center" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.1.left" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.1.right" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom" timestamp="1582686968686">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.bottom/0.0.1536.834@0.0.1536.834" timestamp="1582686968686" />
+    <state width="1493" height="265" key="GridCell.Tab.2.center" timestamp="1582686968686">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.center/0.0.1536.834@0.0.1536.834" timestamp="1582686968686" />
+    <state width="1493" height="265" key="GridCell.Tab.2.left" timestamp="1582686968685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.left/0.0.1536.834@0.0.1536.834" timestamp="1582686968685" />
+    <state width="1493" height="265" key="GridCell.Tab.2.right" timestamp="1582686968686">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="265" key="GridCell.Tab.2.right/0.0.1536.834@0.0.1536.834" timestamp="1582686968686" />
+    <state x="279" y="63" key="SettingsEditor" timestamp="1582596196879">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="279" y="63" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1582596196879" />
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog" timestamp="1582680107891">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="477" y="246" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1582680107891" />
+    <state x="474" y="173" width="588" height="488" key="find.popup" timestamp="1582686736882">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="474" y="173" width="588" height="488" key="find.popup/0.0.1536.834@0.0.1536.834" timestamp="1582686736882" />
+    <state x="477" y="53" key="refactoring.ChangeSignatureDialog" timestamp="1582619867863">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="477" y="53" key="refactoring.ChangeSignatureDialog/0.0.1536.834@0.0.1536.834" timestamp="1582619867863" />
+    <state x="414" y="215" width="672" height="678" key="search.everywhere.popup" timestamp="1582683934288">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="414" y="215" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1582683934288" />
+  </component>
+</project>
