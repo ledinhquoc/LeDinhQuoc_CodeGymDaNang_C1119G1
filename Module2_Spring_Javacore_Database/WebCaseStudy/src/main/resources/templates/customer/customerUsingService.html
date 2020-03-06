@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+
+<body>
+<script>
+    const deleteTableRow=row=>{
+        if(confirm('Are you sure')){
+            const index=row.parentNode.parentNode.rowIndex;
+            document.getElementById("deleted-row").deleteRow(index);
+        }
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $('.toast').toast('show');
+    });
+</script>
+
+<nav th:replace="layout :: header"></nav>
+
+<div class="container" id="main-content">
+    <div class="row">
+        <div class="col-6 no-padding">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search by name ..." name="name" />
+                <button class="btn btn-primary" type="submit" value="Search">
+                    <i class="fa fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+
+        <div class="col-6 no-padding">
+            <a href="/customer/create" class="btn btn-success float-right" id="link1">
+                <i class="fa fa-plus-square"></i> Add new Customer
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/service" class="btn btn-success float-right" id="link2">
+                <i class="fa fa-plus-square"></i> Service
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/contract/create" class="btn btn-success float-right" id="link3">
+                <i class="fa fa-plus-square"></i> Add new Contract
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/contractDetail/create" class="btn btn-success float-right" id="link4">
+                <i class="fa fa-plus-square"></i> Add new ContractDetails
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/customer/customerUsingService" class="btn btn-success float-right" id="link5">
+                <i class="fa fa-plus-square"></i> find all customer using service
+            </a>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="table-responsive">
+            <h5>List of Customer</h5>
+            <table class="table table-bordered table-hover" id="deleted-row">
+                <thead>
+                <tr>
+                    <th>fullName</th>
+                    <th>birthday</th>
+                    <th>ID_card</th>
+                    <th>Phone_number</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>TypeCustomer</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="row,rowStat : ${listCustomer}">
+                    <td th:text="${row.getFullName()}" ></td>
+                    <td th:text="${#dates.format(row.getBirthday(),'dd/MM/yyyy')}" ></td>
+                    <td th:text="${row.getId_card()}" ></td>
+                    <td th:text="${row.getPhone_number()}" ></td>
+                    <td th:text="${row.getEmail()}" ></td>
+                    <td th:text="${row.getAddress()}" ></td>
+                    <td th:text="${row.getTypeCustomer().type_customer_name}" ></td>
+                    <td>
+                        <a th:href="@{/customer/{id}/edit(id=${row.getCustomer_id()})}" class="mr-sm-2 text-primary"><i class="fa fa-pencil"></i></a>
+                        <a th:href="@{/customer/{id}/delete(id=${row.getCustomer_id()})}" class="text-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+
+                </tbody>
+            </table>
+            <div class="pagination" th:if="${listCustomer.hasNext()||listCustomer.hasPrevious()}">
+                <a th:href="@{'/customer-using-service'(page=${listCustomer.number - 1},name=${name})}" th:if="${listCustomer.hasPrevious()}">Back</a>
+                <span th:text="${listCustomer.number + 1}"></span>/<span th:text="${listCustomer.totalPages}"></span>
+                <a th:href="@{'/customer-using-service'(page=${listCustomer.number + 1},name=${name})}" th:if="${listCustomer.hasNext()}">Next</a>
+            </div>
+        </div>
+    </div>
+</div><!-- /.container -->
+
+<footer th:replace="layout :: footer"></footer>
+
+</body>
+</html>

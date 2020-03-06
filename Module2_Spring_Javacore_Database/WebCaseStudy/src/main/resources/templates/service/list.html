@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout :: head"></head>
+
+<body>
+<script>
+    const deleteTableRow=row=>{
+        if(confirm('Are you sure')){
+            const index=row.parentNode.parentNode.rowIndex;
+            document.getElementById("deleted-row").deleteRow(index);
+        }
+    }
+</script>
+<script>
+    $(document).ready(function(){
+        $('.toast').toast('show');
+    });
+</script>
+
+<nav th:replace="layout :: header"></nav>
+
+<div class="container" id="main-content">
+    <div class="row">
+        <div class="col-6 no-padding">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search by name ..." name="name" />
+                <button class="btn btn-primary" type="submit" value="Search">
+                    <i class="fa fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+
+        <div class="col-6 no-padding">
+            <a href="/customer/create" class="btn btn-success float-right" id="link1">
+                <i class="fa fa-plus-square"></i> Add new Customer
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/service" class="btn btn-success float-right" id="link2">
+                <i class="fa fa-plus-square"></i> Service
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/contract/create" class="btn btn-success float-right" id="link3">
+                <i class="fa fa-plus-square"></i> Add new Contract
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/contractDetail/create" class="btn btn-success float-right" id="link4">
+                <i class="fa fa-plus-square"></i> Add new ContractDetails
+            </a>
+        </div>
+        <div class="col-6 no-padding">
+            <a href="/customer/customerUsingService" class="btn btn-success float-right" id="link5">
+                <i class="fa fa-plus-square"></i> find all customer using service
+            </a>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="table-responsive">
+            <h5>List of Customer</h5>
+            <table class="table table-bordered table-hover" id="deleted-row">
+                <thead>
+                <tr>
+                    <th>serviceName</th>
+                    <th>serviceStatus</th>
+                    <th>area_used</th>
+                    <th>number_floors</th>
+                    <th>number_max_people</th>
+                    <th>rental_costs</th>
+                    <th>accompanied_service_status</th>
+                    <th>Rent_type</th>
+                    <th>Service_type</th>
+                    <th>Favorite</th>
+                    <th>Action</th>
+
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="row,rowStat : ${listService}">
+                    <td th:text="${row.getService_name()}" ></td>
+                    <td th:text="${row.getService_status()}" ></td>
+                    <td th:text="${row.getArea_used()}" ></td>
+                    <td th:text="${row.getNumer_floors()}" ></td>
+                    <td th:text="${row.getNumber_max_people()}" ></td>
+                    <td th:text="${row.getRental_costs()}" ></td>
+                    <td th:text="${row.getAccompanied_service_status()}" ></td>
+                    <td th:text="${row.getTypeRent().getTypeRentName()}" ></td>
+                    <td th:text="${row.getTypeService().getTypeServiceName()}" ></td>
+                    <td><a th:href="@{/like-service/{id}(id=${service.getService_id()})}">Add</a> </td>
+                    <td>
+                        <a th:href="@{/contract/{id}/edit(id=${row.getService_id()})}" class="mr-sm-2 text-primary" ><i class="fa fa-pencil"></i></a>
+                        <a th:href="@{/customer/{id}/delete(id=${row.getService_id()})}" class="text-danger"><i class="fa fa-trash"></i></a>
+                    </td>
+
+                </tr>
+
+                </tbody>
+            </table>
+            <div>
+                <a th:href="@{'/service'(page=${listService.number - 1})}" th:if="${listService.hasPrevious()}">Back</a>
+                <span th:text="${listService.number + 1}"></span>/<span th:text="${listService.totalPages}"></span>
+                <a th:href="@{'/service'(page=${listService.number + 1})}" th:if="${listService.hasNext()}">Next</a>
+            </div>
+        </div>
+    </div>
+</div><!-- /.container -->
+
+<footer th:replace="layout :: footer"></footer>
+
+</body>
+</html>

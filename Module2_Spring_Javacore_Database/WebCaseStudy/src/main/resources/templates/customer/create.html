@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: head"></head>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $("#birthday").datepicker({
+            dateFormat: "dd/mm/yy"
+        });
+    });
+</script>
+<body>
+
+<nav th:replace="layout :: header"></nav>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<div class="container" id="form">
+    <div class="row d-flex justify-content-center">
+        <p class="text-left">
+            <a th:href="@{/customer}">
+                Back to customer list
+            </a>
+        </p>
+        <form style="min-width: 300px;" th:object="${customer}" th:action="@{/customer/create}" method="post">
+            <h3 class="text-center">Add new Customer</h3>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input id="" class="form-control is-invalid" type="text" placeholder="Customer Name" th:field="*{fullName}" />
+                <span  class="invalid-feedback" th:if="${#fields.hasErrors('fullName')}"
+                       th:each="e:${#fields.errors('fullName')}"
+                       th:text="${e}"></span><br>
+            </div>
+
+            <div class="form-group">
+                <label>Birthday</label>
+                <input class="form-control is-invalid" id="datepicker" type="date" placeholder="birthday" th:field="*{birthday}">
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('birthday')}"
+                      th:each="e:${#fields.errors('birthday')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>ID Card</label>
+                <input class="form-control is-invalid" type="text" placeholder="ID card" th:field="*{id_card}" />
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('id_card')}"
+                      th:each="e:${#fields.errors('id_card')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input class="form-control is-invalid" type="email" placeholder="Contact email" th:field="*{email}" />
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('email')}"
+                      th:each="e:${#fields.errors('email')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Phone</label>
+                <input class="form-control is-invalid" type="text" placeholder="Contact phone" th:field="*{phone_number}"/>
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('phone_number')}"
+                      th:each="e:${#fields.errors('phone_number')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Address</label>
+                <input class="form-control is-invalid" type="text" placeholder="Address" th:field="*{address}"/>
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('address')}"
+                      th:each="e:${#fields.errors('address')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <td>Type Customer</td>
+                <td>
+                    <select th:field="*{typeCustomer}" class="form-control">
+                        <option th:each="u : ${typeCustomer}" th:value="${u.type_customer_id}" th:text="${u.type_customer_name}"></option>
+                    </select>
+                </td>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary" value="save" >
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div><!-- /.container -->
+
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="layout :: head"></head>
+
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    const Total=(deposit)=>{
+        let vl=document.getElementById('total');
+        vl.value=deposit.value*2;
+    }
+</script>
+<body>
+
+<nav th:replace="layout :: header"></nav>
+<th:block th:if="${message}">
+    <p th:text="${message}"></p>
+</th:block>
+<div class="container" id="form">
+    <div class="row d-flex justify-content-center">
+        <p class="text-left">
+            <a th:href="@{/contract}">
+                Back to customer list
+            </a>
+        </p>
+        <form style="min-width: 300px;" th:object="${contract}" th:action="@{/contract/create}" method="post">
+            <h3 class="text-center">Add new Contract</h3>
+
+
+
+            <div class="form-group">
+                <label>Begin Date</label>
+                <input class="form-control is-invalid" id="datepicker" type="date" placeholder="begin date" th:field="*{contract_date}">
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('contract_date')}"
+                      th:each="e:${#fields.errors('contract_date')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>End Date</label>
+                <input class="form-control is-invalid" id="datepickers" type="date" placeholder="end date" th:field="*{contract_date_end}">
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('contract_date')}"
+                      th:each="e:${#fields.errors('contract_date')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Deposit</label>
+                <input class="form-control is-invalid" onchange="Total(this)" type="text" placeholder="Deposit" id="deposit" th:field="*{id_card}" />
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('deposit')}"
+                      th:each="e:${#fields.errors('deposit')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Total</label>
+                <input class="form-control is-invalid" type="text" id="total" readonly  th:field="*{total}" />
+                <span class="invalid-feedback" th:if="${#fields.hasErrors('total')}"
+                      th:each="e:${#fields.errors('total')}"
+                      th:text="${e}"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Customer</label>
+                <select th:field="*{customer}" class="ion-ios-browsers-outline custom-select">
+                    <option th:each="c:${customer}" th:text="${c.getFullName()}" th:value="${c.getCustomer_id()}"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Service</label>
+                <select th:field="*{service}" class="ion-ios-browsers-outline custom-select">
+                    <option th:each="s:${service}" th:text="${s.getService_name()}" th:value="${s.getService_id()}"></option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Employee</label>
+                <select th:field="*{employee}" class="ion-ios-browsers-outline custom-select">
+                    <option th:each="e:${employee}" th:text="${e.getFullName}" th:value="${e.getEmployee_id}"></option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-block btn-primary" value="save" >
+                    <i class="fa fa-save"></i> Save
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div><!-- /.container -->
+
+<footer th:replace="layout :: footer"></footer>
+</body>
+</html>
