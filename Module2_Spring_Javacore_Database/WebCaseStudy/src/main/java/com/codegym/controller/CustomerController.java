@@ -45,12 +45,12 @@ public class CustomerController{
                                        @RequestParam(name = "sort", required = false, defaultValue = "ASC") String sort,
                                        @RequestParam(name = "sortValue", required = false, defaultValue = "fullName") String sortValue,
                                        Sort sortable){
-        Page< Customer > customerList;
+        Page< Customer > customers;
         if(name.isPresent()){
-            customerList = customerService.findAllWhereNameBeLike(name.get(), pageable);
+            customers = customerService.findAllWhereNameBeLike(name.get(), pageable);
             model.addAttribute("name", name.get());
         }else{
-            customerList = customerService.findAll(pageable);
+            customers = customerService.findAll(pageable);
         }
 
         if(sort.equals("ASC")){

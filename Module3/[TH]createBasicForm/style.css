@@ -1,0 +1,67 @@
+body{
+    margin: 0;
+}
+
+#main{
+    text-align: center;
+}
+
+#head{
+    background-color: cadetblue;
+    top: 0px;
+    height: 100px;
+    width: 100%;
+}
+
+#logo{
+    background-color:cornflowerblue;
+    width: 20%;
+    height: 100%;
+}
+
+#banner{
+    background-color:yellowgreen;
+    width: 100%;
+    height: 100%;
+}
+
+#headlink {
+    overflow: hidden;
+    background-color: #333333;
+    width: 100%;
+}
+
+#headlink a{
+    float: left;
+    font-size: 17px;
+    color: blanchedalmond;
+    padding: 14px 16px;
+}
+
+#left{
+    background-color: blueviolet;
+    height: 400px;
+    width: 15%;
+    float: left;
+}
+
+#content{
+    background-color: bisque;
+    height: 400px;
+    width: 60%;
+    float: left;
+}
+
+#right{
+    background-color: chocolate;
+    height: 400px;
+    width: 25%;
+    float: left;
+}
+
+#footer{
+    background-color: coral;
+    height: 100px;
+    width: 100%;
+    clear: both;
+}
