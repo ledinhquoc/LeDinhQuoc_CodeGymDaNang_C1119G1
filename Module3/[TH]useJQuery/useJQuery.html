@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css">
+<script>
+    // $(document).ready(function(){
+    //     $("#hide").click(function(){
+    //         $("p").hide();
+    //     })
+    //     $("#show").click(function(){
+    //         $("p").show();
+    //     });
+    // });
+
+    $(document).ready(function(){
+        $("button").click(function(){
+            var div = $("div");
+            div.animate({bottom: '220px'},"slow");
+            div.animate({fontSize:'99px'},"slow");
+        });
+    });
+    
+</script>
+
+<title>Title</title>
+</head>
+<body>
+<!-- <p>if you click on Hide button , i will disapear</p>
+<button id="hide">Hide</button>
+<button id="show">show</button> -->
+
+<button> Start animation</button>
+<p>By Default , all Html element have a static position, 
+    and cannot be remove. To manipulate the position,remember to
+     first set position property of the element to relative, fixed and absolute!</p>
+     <div style="background: #98bf22;height: 100px;width: 200px;position: absolute;"></div>
+</body>
+</html>
